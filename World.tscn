@@ -1,0 +1,87 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Sprites/Player/Run0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Sprites/Player/Run1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Sprites/Player/Run2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Sprites/Player/Run3.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Sprites/Player/Run4.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Sprites/Player/Run7.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Sprites/Player/Jump0.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Sprites/Player/Jump1.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Sprites/Player/Jump3.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Sprites/Player/Jump4.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Sprites/Player/Idle0.png" type="Texture" id=12]
+[ext_resource path="res://JungleDirtTileSet.tres" type="TileSet" id=13]
+[ext_resource path="res://addons/gut/gut.gd" type="Script" id=14]
+[ext_resource path="res://addons/gut/icon.png" type="Texture" id=15]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Run",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7, 2.5 )
+
+[node name="World" type="Node"]
+
+[node name="player" type="KinematicBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 96, -32 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="player"]
+position = Vector2( 1, 0 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+animation = "Idle"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2( 3.81469e-006, 0 )
+scale = Vector2( 1, 6.49855 )
+shape = SubResource( 2 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 0.631393, 1.52664 )
+tile_set = ExtResource( 13 )
+cell_size = Vector2( 32, 32 )
+cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 327680, 0, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 5, 0, 393216, 8, 0, 393217, 6, 0, 393218, 6, 0, 393219, 6, 0, 393220, 6, 0, 393221, 7, 0, 393230, 0, 0, 393231, 1, 0, 393232, 1, 0, 393233, 1, 0, 393234, 5, 0, 458761, 0, 0, 458762, 5, 0, 458766, 8, 0, 458767, 6, 0, 458768, 6, 0, 458769, 6, 0, 458770, 7, 0, 524297, 8, 0, 524298, 7, 0 )
+
+[node name="Gut" type="Control" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 256.0
+margin_top = -288.0
+margin_right = 996.0
+margin_bottom = -38.0
+rect_min_size = Vector2( 740, 250 )
+script = ExtResource( 14 )
+__meta__ = {
+"_editor_icon": ExtResource( 15 )
+}
+_run_on_load = true
+_yield_between_tests = false
+_test_prefix = "new_"
+_file_prefix = "new_"
+_directory1 = "res://Test/Unit"
+_directory2 = "res://Test/Integration"
+_double_strategy = 1
