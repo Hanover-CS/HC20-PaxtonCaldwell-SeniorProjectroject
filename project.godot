@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="moving block practice"
+config/name="Surviving_the_Frontier"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
