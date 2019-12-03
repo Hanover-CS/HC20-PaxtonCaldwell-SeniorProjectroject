@@ -21,10 +21,10 @@ tile_data = PoolIntArray( 327680, 0, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0
 
 [node name="Gut" type="Control" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 66.0
-margin_top = -320.0
-margin_right = 806.0
-margin_bottom = -70.0
+margin_left = -1061.11
+margin_top = -456.873
+margin_right = -321.111
+margin_bottom = -206.873
 rect_min_size = Vector2( 740, 250 )
 script = ExtResource( 3 )
 __meta__ = {

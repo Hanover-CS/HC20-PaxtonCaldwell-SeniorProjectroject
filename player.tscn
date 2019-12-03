@@ -7,12 +7,12 @@
 [ext_resource path="res://Sprites/Sprites/Player/Run3.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Sprites/Player/Run4.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Sprites/Player/Run7.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Sprites/Player/Jump0.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Sprites/Player/Jump1.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Sprites/Player/Jump3.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Sprites/Player/Jump4.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Sprites/Player/Idle0.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Sprites/Tiles/sky.jpg" type="Texture" id=13]
+[ext_resource path="res://Sprites/Sprites/Player/Idle0.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Sprites/Player/Jump0.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Sprites/Player/Jump1.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Sprites/Player/Jump3.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Sprites/Player/Jump4.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Sprites/Tiles/space.png" type="Texture" id=13]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -21,14 +21,14 @@ animations = [ {
 "name": "Run",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "Jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ) ],
+"frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "Jump",
 "speed": 5.0
 } ]
 
@@ -60,6 +60,10 @@ drag_margin_v_enabled = false
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="sky" type="Sprite" parent="ParallaxBackground"]
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.1, 0.1 )
+motion_mirroring = Vector2( 589, 589 )
+
+[node name="space" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 293.159, 295.055 )
 texture = ExtResource( 13 )
-centered = false
