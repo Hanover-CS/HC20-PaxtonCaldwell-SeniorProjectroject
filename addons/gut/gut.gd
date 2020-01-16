@@ -54,10 +54,8 @@ export var _should_print_to_console = true setget set_should_print_to_console, g
 export(int, 'Failures only', 'Tests and failures', 'Everything') var _log_level = 1 setget set_log_level, get_log_level
 # This var is JUST used to expose this setting in the editor
 # the var that is used is in the _yield_between hash.
-export var _yield_between_tests = true setget set_yield_between_tests, get_yield_between_tests
 export var _disable_strict_datatype_checks = false setget disable_strict_datatype_checks, is_strict_datatype_checks_disabled
 # The prefix used to get tests.
-export var _test_prefix = 'test_'
 export var _file_prefix = 'test_'
 export var _file_extension = '.gd'
 export var _inner_class_prefix = 'Test'
@@ -94,7 +92,6 @@ var _test_collector = _utils.TestCollector.new()
 var _test_script_objects = []
 
 var _waiting = false
-var _done = false
 var _is_running = false
 
 var _current_test = null
@@ -221,7 +218,6 @@ func _setup_gui():
 	_gui.connect('end_pause', self, '_on_new_gui_end_pause')
 	_gui.connect('ignore_pause', self, '_on_new_gui_ignore_pause')
 	_gui.connect('log_level_changed', self, '_on_log_level_changed')
-	connect('tests_finished', _gui, 'end_run')
 
 func _add_scripts_to_gui():
 	var scripts = []
@@ -364,8 +360,6 @@ func _init_run():
 # Print out run information and close out the run.
 # ------------------------------------------------------------------------------
 func _end_run():
-	var failed_tests = []
-	var more_than_one = _test_script_objects.size() > 1
 
 	p(_get_summary_text(), 0)
 	p("\n")
@@ -537,7 +531,6 @@ func _test_the_scripts(indexes=[]):
 	_gui.set_progress_script_max(indexes_to_run.size()) # New way
 	_gui.set_progress_script_value(0)
 
-	var file = File.new()
 	if(_doubler.get_strategy() == _utils.DOUBLE_STRATEGY.FULL):
 		_lgr.info("Using Double Strategy FULL as default strategy.  Keep an eye out for weirdness, this is still experimental.")
 

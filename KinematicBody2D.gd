@@ -5,6 +5,7 @@ const MAX_SPEED = 200
 const ACCELERATION = 50
 const JUMP_HEIGHT = -550
 const UP = Vector2(0,-1)
+const FALLING_OFF_MAP = 3000
 
 var motion = Vector2()
 
@@ -13,6 +14,7 @@ func _physics_process(delta):
 	motion.y += GRAVITY
 	move_character()
 	on_floor_ready_to_jump()
+	is_falling_off_map()
 	motion = move_and_slide(motion, UP)
 	pass
 	
@@ -29,6 +31,10 @@ func move_player_left():
 func stop_player_movement():
 	$Sprite.play("Idle")
 	motion.x = 0
+
+func is_falling_off_map():
+	if motion.y > FALLING_OFF_MAP:
+		get_tree().reload_current_scene()
 		
 func on_floor_ready_to_jump():
 	if is_on_floor():
