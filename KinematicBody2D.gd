@@ -34,7 +34,10 @@ func stop_player_movement():
 
 func is_falling_off_map():
 	if motion.y > FALLING_OFF_MAP:
-		get_tree().reload_current_scene()
+		respond()
+		
+func respond():
+	get_tree().reload_current_scene()
 		
 func on_floor_ready_to_jump():
 	if is_on_floor():
