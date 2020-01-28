@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://JungleDirtTileSet.tres" type="TileSet" id=2]
+[ext_resource path="res://GroundTileSet.tres" type="TileSet" id=2]
 [ext_resource path="res://addons/gut/gut.gd" type="Script" id=3]
 [ext_resource path="res://addons/gut/icon.png" type="Texture" id=4]
 [ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=5]
@@ -17,7 +17,7 @@ tile_set = ExtResource( 2 )
 cell_size = Vector2( 32, 32 )
 cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 format = 1
-tile_data = PoolIntArray( 327680, 0, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 5, 0, 393216, 8, 0, 393217, 6, 0, 393218, 6, 0, 393219, 6, 0, 393220, 6, 0, 393221, 7, 0, 393230, 0, 0, 393231, 1, 0, 393232, 1, 0, 393233, 1, 0, 393234, 5, 0, 458761, 0, 0, 458762, 5, 0, 458766, 8, 0, 458767, 6, 0, 458768, 6, 0, 458769, 6, 0, 458770, 7, 0, 524297, 8, 0, 524298, 7, 0 )
+tile_data = PoolIntArray( 327680, 0, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 5, 0, 393216, 8, 0, 393217, 6, 0, 393218, 6, 0, 393219, 6, 0, 393220, 6, 0, 393221, 7, 0, 393230, 0, 0, 393231, 1, 0, 393232, 1, 0, 393233, 1, 0, 393234, 5, 0, 458761, 0, 0, 458762, 5, 0, 458766, 8, 0, 458767, 6, 0, 458768, 6, 0, 458769, 6, 0, 458770, 7, 0, 524297, 8, 0, 524298, 7, 0, 524310, 0, 0, 524311, 1, 0, 524312, 5, 0, 589846, 2, 0, 589847, 3, 0, 589848, 4, 0, 655376, 0, 0, 655377, 1, 0, 655378, 5, 0, 655382, 8, 0, 655383, 6, 0, 655384, 7, 0, 720912, 2, 0, 720913, 3, 0, 720914, 4, 0, 786438, 0, 0, 786439, 1, 0, 786440, 1, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 1, 0, 786445, 5, 0, 786448, 8, 0, 786449, 6, 0, 786450, 7, 0, 851974, 2, 0, 851975, 3, 0, 851976, 3, 0, 851977, 3, 0, 851978, 3, 0, 851979, 3, 0, 851980, 3, 0, 851981, 4, 0, 917510, 8, 0, 917511, 6, 0, 917512, 6, 0, 917513, 6, 0, 917514, 6, 0, 917515, 6, 0, 917516, 6, 0, 917517, 7, 0 )
 
 [node name="Gut" type="Control" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
@@ -30,10 +30,8 @@ script = ExtResource( 3 )
 __meta__ = {
 "_editor_icon": ExtResource( 4 )
 }
-_run_on_load = true
-_yield_between_tests = false
-_test_prefix = "new_"
-_file_prefix = "new_"
+_select_script = "automatedTests"
+_file_prefix = ""
 _directory1 = "res://Test/Unit"
 _directory2 = "res://Test/Integration"
 _double_strategy = 1
