@@ -20,4 +20,3 @@ position = Vector2( 17.8319, 18.3723 )
 
 [node name="WorldComplete" parent="." instance=ExtResource( 3 )]
 position = Vector2( 461.669, 271.602 )
-world_scene = "res://World.tscn"

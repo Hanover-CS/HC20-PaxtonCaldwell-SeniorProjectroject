@@ -37,5 +37,4 @@ _directory2 = "res://Test/Integration"
 _double_strategy = 1
 
 [node name="WorldComplete" parent="." instance=ExtResource( 5 )]
-position = Vector2( 596.372, 176.931 )
-world_scene = "res://World2.tscn"
+position = Vector2( 778.584, 238.548 )
