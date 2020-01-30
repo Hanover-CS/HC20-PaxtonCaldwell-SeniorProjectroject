@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portal (3).jpg-03646059ef64f80a31edd67f98d7931b.stex"
+path="res://.import/green__0006_walk_1.png-d324ba563be8e828aaf8d4a8c6c283e0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Sprites/Tiles/portal (3).jpg"
-dest_files=[ "res://.import/portal (3).jpg-03646059ef64f80a31edd67f98d7931b.stex" ]
+source_file="res://Sprites/Sprites/Alien/green__0006_walk_1.png"
+dest_files=[ "res://.import/green__0006_walk_1.png-d324ba563be8e828aaf8d4a8c6c283e0.stex" ]
 
 [params]
 

@@ -55,7 +55,8 @@ position = Vector2( 12, 12 )
 shape = SubResource( 1 )
 
 [node name="3" type="Sprite" parent="."]
-position = Vector2( 64, 64 )
+position = Vector2( 59.7191, 60.6704 )
+scale = Vector2( 1.26012, 1.22296 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -65,7 +66,7 @@ region_rect = Rect2( 160, 160, 32, 32 )
 position = Vector2( 4.1666, 4.33893 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="3/StaticBody2D"]
-position = Vector2( 12, 12.0001 )
+position = Vector2( 11.7222, 11.7057 )
 shape = SubResource( 1 )
 
 [node name="5" type="Sprite" parent="."]
