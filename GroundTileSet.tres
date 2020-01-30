@@ -3,7 +3,7 @@
 [ext_resource path="res://Sprites/Sprites/Tiles/JungleDirtTileSet.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 15.6684, 15.6408 )
+extents = Vector2( 15.6965, 15.6408 )
 
 [resource]
 0/name = "0"
@@ -19,7 +19,7 @@ extents = Vector2( 15.6684, 15.6408 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16.3035, 16.1475 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 16.1666, 16.3389 )
 } ]
 0/z_index = 0
 1/name = "1"
@@ -35,7 +35,7 @@ extents = Vector2( 15.6684, 15.6408 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16.1666, 16.3389 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 16, 16.3389 )
 } ]
 1/z_index = 0
 2/name = "2"
@@ -99,7 +99,7 @@ extents = Vector2( 15.6684, 15.6408 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 15.8857, 16.5337 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 16.1666, 16.3389 )
 } ]
 5/z_index = 0
 6/name = "6"

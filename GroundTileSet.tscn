@@ -3,44 +3,32 @@
 [ext_resource path="res://Sprites/Sprites/Tiles/JungleDirtTileSet.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 15.6684, 15.6408 )
+extents = Vector2( 15.6965, 15.6408 )
 
 [node name="JungleDirtTiles" type="Node"]
 
 [node name="0" type="Sprite" parent="."]
-position = Vector2( 1.13687e-013, 0 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 92, 32, 32 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="StaticBody2D" type="StaticBody2D" parent="0"]
 position = Vector2( 4.1666, 4.33893 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0/StaticBody2D"]
-position = Vector2( 12.1369, 11.8086 )
+position = Vector2( 12, 12 )
 shape = SubResource( 1 )
 
 [node name="1" type="Sprite" parent="."]
-position = Vector2( 64, 0 )
-scale = Vector2( 1, 1 )
+position = Vector2( 63.2865, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 32, 92, 32, 32 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="StaticBody2D" type="StaticBody2D" parent="1"]
-position = Vector2( 4.1666, 4.33893 )
-__meta__ = {
-"_edit_group_": true
-}
+position = Vector2( 4, 4.33893 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="1/StaticBody2D"]
 position = Vector2( 12, 12 )
@@ -48,7 +36,6 @@ shape = SubResource( 1 )
 
 [node name="2" type="Sprite" parent="."]
 position = Vector2( 0, 64 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -83,7 +70,6 @@ shape = SubResource( 1 )
 
 [node name="5" type="Sprite" parent="."]
 position = Vector2( 128, 64 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -107,12 +93,11 @@ region_rect = Rect2( 64, 92, 32, 32 )
 position = Vector2( 4.1666, 4.33893 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="4/StaticBody2D"]
-position = Vector2( 11.7191, 12.1948 )
+position = Vector2( 12, 12 )
 shape = SubResource( 1 )
 
 [node name="6" type="Sprite" parent="."]
 position = Vector2( 64, 128 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -141,7 +126,6 @@ shape = SubResource( 1 )
 
 [node name="8" type="Sprite" parent="."]
 position = Vector2( 7.62939e-006, 128 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
