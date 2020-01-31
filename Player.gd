@@ -1,3 +1,7 @@
+# Class: Player
+# Author: Paxton Caldwell
+# Description: Class implementing functionality for player's character
+
 extends KinematicBody2D
 
 const GRAVITY = 20

@@ -1,4 +1,7 @@
-#StartMenu.gd
+# Class: StartMenu
+# Author: Paxton Caldwell
+# Description: Class implementing functionality for start menu
+
 extends Control
 
 func _on_StartGameButton_pressed():
