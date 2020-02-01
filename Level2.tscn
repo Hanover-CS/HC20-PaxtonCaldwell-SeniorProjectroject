@@ -2,10 +2,10 @@
 
 [ext_resource path="res://GroundTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://EndPoint.tscn" type="PackedScene" id=3]
-[ext_resource path="res://PauseMenu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://PauseMenu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://NextLevelPortal.tscn" type="PackedScene" id=4]
 
-[node name="World2" type="Node"]
+[node name="Level2" type="Node"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -19,10 +19,11 @@ __meta__ = {
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 17.8319, 18.3723 )
 
-[node name="EndPoint" parent="." instance=ExtResource( 3 )]
-position = Vector2( 461.669, 271.602 )
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 4 )]
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 3 )]
 visible = false
+
+[node name="NextLevelPortal" parent="." instance=ExtResource( 4 )]
+position = Vector2( 458.225, 269.639 )
+scene = "res://LevelSelectMenu.tscn"

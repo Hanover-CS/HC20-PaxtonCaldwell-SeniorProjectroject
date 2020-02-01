@@ -4,11 +4,11 @@
 [ext_resource path="res://GroundTileSet.tres" type="TileSet" id=2]
 [ext_resource path="res://addons/gut/gut.gd" type="Script" id=3]
 [ext_resource path="res://addons/gut/icon.png" type="Texture" id=4]
-[ext_resource path="res://EndPoint.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Alien.tscn" type="PackedScene" id=6]
-[ext_resource path="res://PauseMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Alien.tscn" type="PackedScene" id=5]
+[ext_resource path="res://PauseMenu.tscn" type="PackedScene" id=6]
+[ext_resource path="res://NextLevelPortal.tscn" type="PackedScene" id=7]
 
-[node name="World" type="Node"]
+[node name="Level1" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 14.0841, 146.562 )
@@ -23,29 +23,31 @@ tile_data = PoolIntArray( 327680, 0, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0
 
 [node name="Gut" type="Control" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
-margin_left = -1061.11
-margin_top = -456.873
-margin_right = -321.111
-margin_bottom = -206.873
+margin_left = -11.8661
+margin_top = -554.37
+margin_right = 728.134
+margin_bottom = -304.37
 rect_min_size = Vector2( 740, 250 )
 script = ExtResource( 3 )
 __meta__ = {
 "_editor_icon": ExtResource( 4 )
 }
 _select_script = "automatedTests"
+_run_on_load = true
 _yield_between_tests = false
 _file_prefix = ""
 _directory1 = "res://Test/Unit"
 _directory2 = "res://Test/Integration"
 _double_strategy = 1
 
-[node name="EndPoint" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1808.48, 208.619 )
-
-[node name="Alien" parent="." instance=ExtResource( 6 )]
+[node name="Alien" parent="." instance=ExtResource( 5 )]
 position = Vector2( 56.8494, 145.31 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 7 )]
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 6 )]
 visible = false
+
+[node name="NextLevelPortal" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1012.88, 208.146 )
+scene = "res://Level2.tscn"
