@@ -67,7 +67,7 @@ extents = Vector2( 15.6965, 15.6408 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 15.8888, 16.0447 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 15.8888, 16.0446 )
 } ]
 3/z_index = 0
 4/name = "5"

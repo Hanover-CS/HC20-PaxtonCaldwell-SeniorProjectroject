@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GroundTileSet.tres" type="TileSet" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://addons/gut/icon.png" type="Texture" id=4]
 [ext_resource path="res://EndPoint.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Alien.tscn" type="PackedScene" id=6]
+[ext_resource path="res://PauseMenu.tscn" type="PackedScene" id=7]
 
 [node name="World" type="Node"]
 
@@ -43,3 +44,8 @@ position = Vector2( 1808.48, 208.619 )
 
 [node name="Alien" parent="." instance=ExtResource( 6 )]
 position = Vector2( 56.8494, 145.31 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 7 )]
+visible = false
