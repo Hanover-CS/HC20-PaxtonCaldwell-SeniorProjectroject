@@ -9,7 +9,7 @@
 [ext_resource path="res://Sprites/Sprites/Alien/green__0011_walk_6.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Sprites/Alien/green__0000_idle_1.png" type="Texture" id=8]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
@@ -22,7 +22,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 13.5697, 15.3315 )
 
 [node name="Alien" type="KinematicBody2D"]
@@ -32,10 +32,10 @@ script = ExtResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 15.9135, 0 )
 scale = Vector2( 0.0813087, 0.0716096 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "WalkA"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 15.3018, 0 )
 scale = Vector2( 0.5, 1 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
