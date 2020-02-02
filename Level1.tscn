@@ -40,7 +40,7 @@ _directory2 = "res://Test/Integration"
 _double_strategy = 1
 
 [node name="Alien" parent="." instance=ExtResource( 5 )]
-position = Vector2( 739.968, 138.09 )
+position = Vector2( 1093.82, 144.676 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

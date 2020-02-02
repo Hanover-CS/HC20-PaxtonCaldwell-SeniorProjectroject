@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Alien.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Sprites/Alien/green__0006_walk_1.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Sprites/Sprites/Alien/green__0010_walk_5.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Sprites/Alien/green__0011_walk_6.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Sprites/Alien/green__0000_idle_1.png" type="Texture" id=8]
+[ext_resource path="res://AlienHitBox.gd" type="Script" id=9]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -25,6 +26,9 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 13.5697, 15.3315 )
 
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 8.32671, 15.9343 )
+
 [node name="Alien" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
@@ -41,3 +45,10 @@ shape = SubResource( 2 )
 position = Vector2( 5, 9.38 )
 enabled = true
 cast_to = Vector2( 0, 20 )
+
+[node name="AlienHitBox" type="Area2D" parent="."]
+script = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AlienHitBox"]
+position = Vector2( -0.815628, 0 )
+shape = SubResource( 3 )

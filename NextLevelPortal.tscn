@@ -5,7 +5,7 @@
 [ext_resource path="res://Sprites/Sprites/Tiles/portal (2).jpg" type="Texture" id=3]
 [ext_resource path="res://Sprites/Sprites/Tiles/portal (4).jpg" type="Texture" id=4]
 
-[sub_resource type="AnimatedTexture" id=3]
+[sub_resource type="AnimatedTexture" id=1]
 flags = 4
 frames = 3
 fps = 7.0
@@ -26,7 +26,7 @@ __meta__ = {
 
 [node name="portal" type="Sprite" parent="."]
 scale = Vector2( 0.25, 0.25 )
-texture = SubResource( 3 )
+texture = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
