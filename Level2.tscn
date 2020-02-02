@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GroundTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://PauseMenu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://NextLevelPortal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Alien.tscn" type="PackedScene" id=5]
 
 [node name="Level2" type="Node"]
 
@@ -11,13 +12,13 @@
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 262144, 0, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 5, 0, 262153, 0, 0, 262154, 1, 0, 262155, 1, 0, 262156, 1, 0, 262157, 1, 0, 262158, 1, 0, 262159, 5, 0, 327680, 8, 0, 327681, 6, 0, 327682, 6, 0, 327683, 6, 0, 327684, 6, 0, 327685, 7, 0, 327689, 8, 0, 327690, 6, 0, 327691, 6, 0, 327692, 6, 0, 327693, 6, 0, 327694, 6, 0, 327695, 7, 0, 589829, 0, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 589834, 1, 0, 589835, 1, 0, 589836, 1, 0, 589837, 1, 0, 589838, 5, 0, 655365, 8, 0, 655366, 6, 0, 655367, 6, 0, 655368, 6, 0, 655369, 6, 0, 655370, 6, 0, 655371, 6, 0, 655372, 6, 0, 655373, 6, 0, 655374, 7, 0 )
+tile_data = PoolIntArray( 131082, 0, 0, 131083, 1, 0, 131084, 1, 0, 131085, 1, 0, 131086, 1, 0, 131087, 5, 0, 131093, 0, 0, 131094, 5, 0, 131100, 0, 0, 131101, 5, 0, 131107, 0, 0, 131108, 5, 0, 196618, 8, 0, 196619, 6, 0, 196620, 6, 0, 196621, 6, 0, 196622, 6, 0, 196623, 7, 0, 196629, 8, 0, 196630, 7, 0, 196636, 8, 0, 196637, 7, 0, 196643, 8, 0, 196644, 7, 0, 262144, 0, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 5, 0, 327680, 8, 0, 327681, 6, 0, 327682, 6, 0, 327683, 6, 0, 327684, 6, 0, 327685, 7, 0, 393257, 0, 0, 393258, 1, 0, 393259, 1, 0, 393260, 1, 0, 393261, 5, 0, 458793, 8, 0, 458794, 6, 0, 458795, 6, 0, 458796, 6, 0, 458797, 7, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 17.8319, 18.3723 )
+position = Vector2( 13.1552, 109.894 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -25,5 +26,11 @@ position = Vector2( 17.8319, 18.3723 )
 visible = false
 
 [node name="NextLevelPortal" parent="." instance=ExtResource( 4 )]
-position = Vector2( 458.225, 269.639 )
+position = Vector2( 1443.81, 175.518 )
 scene = "res://LevelSelectMenu.tscn"
+
+[node name="Alien" parent="." instance=ExtResource( 5 )]
+position = Vector2( 336.644, 50.2534 )
+
+[node name="Alien2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1329.82, 176.157 )

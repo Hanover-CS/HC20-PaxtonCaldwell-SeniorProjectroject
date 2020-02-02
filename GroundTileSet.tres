@@ -3,7 +3,7 @@
 [ext_resource path="res://Sprites/Sprites/Tiles/JungleDirtTileSet.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 15.6965, 15.6408 )
+extents = Vector2( 16.043, 15.6408 )
 
 [resource]
 0/name = "0"
@@ -67,7 +67,7 @@ extents = Vector2( 15.6965, 15.6408 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 15.8888, 16.0446 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 16.1666, 16.3389 )
 } ]
 3/z_index = 0
 4/name = "5"
@@ -83,7 +83,7 @@ extents = Vector2( 15.6965, 15.6408 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 15.6965, 16.1011 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 16.1666, 16.3389 )
 } ]
 4/z_index = 0
 5/name = "4"
@@ -115,7 +115,7 @@ extents = Vector2( 15.6965, 15.6408 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 15.6479, 15.8202 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 16.1666, 16.3389 )
 } ]
 6/z_index = 0
 7/name = "7"
@@ -131,7 +131,7 @@ extents = Vector2( 15.6965, 15.6408 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 15.4101, 15.5824 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 16.1666, 16.3389 )
 } ]
 7/z_index = 0
 8/name = "8"
@@ -147,6 +147,6 @@ extents = Vector2( 15.6965, 15.6408 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 16.5992, 15.8202 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 16.1666, 16.3389 )
 } ]
 8/z_index = 0
