@@ -27,7 +27,7 @@ visible = false
 
 [node name="NextLevelPortal" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1443.81, 175.518 )
-scene = "res://LevelSelectMenu.tscn"
+scene = "res://Level3.tscn"
 
 [node name="Alien" parent="." instance=ExtResource( 5 )]
 position = Vector2( 336.644, 50.2534 )

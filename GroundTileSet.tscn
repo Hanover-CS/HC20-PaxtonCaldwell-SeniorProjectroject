@@ -70,10 +70,6 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="3"]
 position = Vector2( 4.1666, 4.33893 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="3/StaticBody2D"]
-position = Vector2( 12, 12 )
-shape = SubResource( 1 )
-
 [node name="5" type="Sprite" parent="."]
 position = Vector2( 64, 32 )
 texture = ExtResource( 1 )
