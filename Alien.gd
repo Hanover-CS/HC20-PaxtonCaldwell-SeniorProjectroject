@@ -8,23 +8,34 @@ var velocity = Vector2()
 var direction = 1
 
 func _physics_process(delta):
-	velocity.x = SPEED * direction
+	gravity()
+	move_alien()
+	sprite_faces_direction()
+	detect_ledge()
+	detect_wall()
+	
+func detect_wall():
+	if is_on_wall():
+		flip_alien_sprite()
+		
+func detect_ledge():
+	if $RayCast2D.is_colliding() == false:
+		flip_alien_sprite()
+
+func flip_alien_sprite():
+	direction = direction * -1
+	$RayCast2D.position.x *= -1	
+	
+func sprite_faces_direction():
 	if direction == 1:
 		$AnimatedSprite.flip_h = false
 	else:
 		$AnimatedSprite.flip_h = true
-		
-	$AnimatedSprite.play("WalkA")
-	velocity.y += GRAVITY
-	velocity = move_and_slide(velocity, FLOOR)
-	
-	if is_on_wall():
-		direction = direction * -1
-		$RayCast2D.position.x *= -1
-		
-	if $RayCast2D.is_colliding() == false:
-		direction = direction * -1
-		$RayCast2D.position.x *= -1
-	
-	
 
+func gravity():
+	velocity.y += GRAVITY
+	
+func move_alien():
+	velocity.x = SPEED * direction
+	velocity = move_and_slide(velocity, FLOOR)
+	$AnimatedSprite.play("WalkA")
