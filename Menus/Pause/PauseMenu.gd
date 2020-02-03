@@ -17,7 +17,7 @@ func _on_resumeButton_pressed():
 
 func _on_quitButton_pressed():
 	_unpause_Processing()
-	get_tree().change_scene("res://StartMenu.tscn")
+	get_tree().change_scene("res://Menus/StartMenu/StartMenu.tscn")
 	
 func _unpause_Processing(): 
 	get_tree().paused = not get_tree().paused

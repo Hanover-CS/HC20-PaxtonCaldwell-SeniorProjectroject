@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Alien.gd" type="Script" id=1]
+[ext_resource path="res://Alien/Alien.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Sprites/Alien/green__0000_idle_1.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Sprites/Alien/green__0006_walk_1.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Sprites/Alien/green__0007_walk_2.png" type="Texture" id=4]
@@ -8,7 +8,7 @@
 [ext_resource path="res://Sprites/Sprites/Alien/green__0009_walk_4.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Sprites/Alien/green__0010_walk_5.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Sprites/Alien/green__0011_walk_6.png" type="Texture" id=8]
-[ext_resource path="res://AlienHitBox.gd" type="Script" id=9]
+[ext_resource path="res://Alien/AlienHitBox.gd" type="Script" id=9]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
