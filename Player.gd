@@ -9,7 +9,7 @@ const MAX_SPEED = 200
 const ACCELERATION = 50
 const JUMP_HEIGHT = -550
 const UP = Vector2(0,-1)
-const FALLING_OFF_MAP = 3000
+const FALLING_OFF_MAP = 2000
 
 var motion = Vector2()
 
