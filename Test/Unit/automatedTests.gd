@@ -4,7 +4,7 @@
 
 extends "res://addons/gut/test.gd"
 
-const TESTPLAYER = preload("res://Player.gd")
+const TESTPLAYER = preload("res://Player/Player.gd")
 
 var motion = Vector2()
 const MAX_SPEED = 200
@@ -38,5 +38,11 @@ func test_input_arrow_up():
 	var up = Input.is_action_just_pressed("ui_up")
 	assert_eq(up, Input.is_action_just_pressed("ui_up"))
 	
-
+func test_input_arrow_right():
+	var right = Input.is_action_just_pressed("ui_right")
+	assert_eq(right, Input.is_action_just_pressed("ui_right"))
+	
+func test_input_arrow_left():
+	var left = Input.is_action_just_pressed("ui_left")
+	assert_eq(left, Input.is_action_just_pressed("ui_left"))
 	
