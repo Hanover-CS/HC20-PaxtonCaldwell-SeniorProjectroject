@@ -33,5 +33,9 @@ Controls
 - 'esc' key: Pause game/Unpause game
 - "Quit Game" button in the start menu: Exists the program
 -----------------------------------------------------
+Known Issues
+-----------------------------------------------------
+- Dark ground tile texture creates checker board pattern when next to other dark ground tiles
+- Moving levels into a new folder in file structure crashes game
 
 E-mail: caldwellp20@hanover.edu
