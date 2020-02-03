@@ -15,12 +15,11 @@ var motion = Vector2()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	motion.y += GRAVITY
+	gravity()
 	move_character()
 	on_floor_ready_to_jump()
 	is_falling_off_map()
 	motion = move_and_slide(motion, UP)
-	pass
 	
 func move_player_right():
 	motion.x = min(motion.x+ACCELERATION, MAX_SPEED)
@@ -49,6 +48,9 @@ func on_floor_ready_to_jump():
 			motion.y = JUMP_HEIGHT
 	else:
 		$Sprite.play("Jump")
+
+func gravity():
+	motion.y += GRAVITY
 
 func move_character():
 	if Input.is_action_pressed("ui_right"):
