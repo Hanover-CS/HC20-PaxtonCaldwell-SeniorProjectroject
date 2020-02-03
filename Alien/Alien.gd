@@ -1,3 +1,8 @@
+# Class: Alien
+# Author: Paxton Caldwell
+# Description: Class implementing alien functionality and AI
+
+
 extends KinematicBody2D
 
 const GRAVITY = 20

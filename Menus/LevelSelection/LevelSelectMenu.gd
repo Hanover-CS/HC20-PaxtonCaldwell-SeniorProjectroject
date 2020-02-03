@@ -14,6 +14,6 @@ func _on_Level3Button_pressed():
 	get_tree().change_scene("res://Level3.tscn")
 
 func _on_BackButton_pressed():
-	get_tree().change_scene("res://StartMenu.tscn")
+	get_tree().change_scene("res://Menus/StartMenu/StartMenu.tscn")
 
 
